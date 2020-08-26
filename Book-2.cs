@@ -5,9 +5,10 @@ namespace GradeBook /*przestrzeń nazw pozwala na wykorzystanie tych samych np k
 {
     public class Book /* definicja klasy Book */
     {
-        public Book(string v)
+        public Book(string name)
         {
             grades = new List<double>();
+            Name = name;
         }
         public void AddGrade(double grade) /* Metoda która nie zwraca żadnych wartości nazywa się Addgrade i 
         a w nawiasach jest liczba parametrów a nazwa mojego parametru będzie grade */
@@ -41,6 +42,7 @@ z tablicy numbers i umieszczam je w zmiennej grade za pomocą powyższej funkcji
         
       }
 
+public string Name; 
 private List<double> grades; /* zmienna która jest dostępna dla typu Book do końca jego istnienia wtedy już nie jest
         zmienną tylko jest polem, listy nie mamy dodanej w tej klasie więc aby jej użyć musimy dodać dostęp 
         do biblioteki z listą "powyżej dodana" */
