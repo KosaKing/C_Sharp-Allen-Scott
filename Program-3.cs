@@ -26,7 +26,7 @@ namespace GradeBook /* Przestrzeń nazw GradeBook */
             var all=0.0;
             var highGrade = double.MinValue;
             var MinValuee = double.MaxValue;
-           
+            
            
             foreach (var number in grades)
             {
@@ -52,6 +52,7 @@ z tablicy numbers i umieszczam je w zmiennej number za pomocą powyższej funkcj
             Console.WriteLine($"The highest value {stats.High}");
             Console.WriteLine($"The lowest value {stats.Low}");
             Console.WriteLine($"All grades {stats.Average}");
+            Console.WriteLine($"All grades {stats.Grade}");
             stats.Average/=grades.Count;
 
 
