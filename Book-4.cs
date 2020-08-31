@@ -49,7 +49,8 @@ namespace GradeBook /*przestrzeń nazw pozwala na wykorzystanie tych samych np k
           }
           else
           {
-              grades.Add(0);
+              Console.WriteLine("Niepoprawna wartość podaj poprawną:");
+              throw new ArgumentException($"Invalid{nameof(grade)}");
           }
         }
         
