@@ -70,9 +70,6 @@ namespace GradeBook /*przestrzeń nazw pozwala na wykorzystanie tych samych np k
       public override Statistics GetStatistics()
       {
           var all = new Statistics();
-          all.Average = 0.0;
-          all.High = double.MinValue;
-          all.Low = double.MaxValue;
            
            var index=0;
             while(index < grades.Count)
@@ -80,37 +77,13 @@ namespace GradeBook /*przestrzeń nazw pozwala na wykorzystanie tych samych np k
             /* Tworzę zmienną która będzie przechowywać wartość każdego elementu znajdującego się w kolekcji którą iteruje 
 i powiedzieć - foreach - że ta wartość będzie działała na wartościach numbers - czyli sumuje wszystkie wartości
 z tablicy numbers i umieszczam je w zmiennej grade za pomocą powyższej funkcji*/     
-                all.Average += grades[index];
-                all.High = Math.Max(grades[index], all.High);
-                all.Low = Math.Min(grades[index], all.Low);
+                all.Add(grades[index]);
                 index += 1;
             };
 
             
-            all.Average/=grades.Count;
             
-            switch(all.Average)
-            {
-              case var d when d >= 90:
-              all.Grade = 'A';
-              break;
-              
-              case var d when d >= 80:
-              all.Grade = 'B';
-              break;
-              
-              case var d when d >= 70:
-              all.Grade = 'C';
-              break;
-              
-              case var d when d >= 60:
-              all.Grade = 'D';
-              break;
-
-              default:
-              all.Grade = 'F';
-              break;
-            }
+            
 
             return all;
 
