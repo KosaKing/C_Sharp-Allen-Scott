@@ -9,7 +9,7 @@ namespace GradeBook /* Przestrzeń nazw GradeBook */
         {
             Console.WriteLine("Podaj ocenę, jeśli chcesz zakończyć działanie programu wciśnij Q:");
 
-            var book = new InMemoryBook("Hi"); /* nowa zmienna przypisana do klasy Book, jednocześnie puste nawiasy 
+            IBook book = new DiskBook("Hi"); /* nowa zmienna przypisana do klasy Book, jednocześnie puste nawiasy 
             powodują wywołanie metody tzw konstruktora, idea konstruktora polega na tym że konstruuje obiekty typu 
             Book lub typu list. Nie musimy pisać metody konstrkutora, ale jeśli się zdecyduje mogę przejąć całkowitą 
             kontrolę nad inicjalizacją obiektu produkowanego przez moją klasę */
@@ -23,7 +23,7 @@ namespace GradeBook /* Przestrzeń nazw GradeBook */
 
             Console.WriteLine($"The highest grade {stats.High}");
             Console.WriteLine($"The lowest grade {stats.Low}");
-            Console.WriteLine($"Average of all grades {stats.Average}");
+            Console.WriteLine($"Average of all grades {stats.AverageFunction}");
             Console.WriteLine($"U get  {stats.Grade} grade");
 
 
